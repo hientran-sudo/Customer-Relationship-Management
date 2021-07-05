@@ -1,0 +1,30 @@
+﻿@model Product
+@{
+    ViewBag.Title = "Product Details";
+}
+
+<h1>Product Details</h1>
+<div class="row">
+    <div class="col-sm-4">
+        <img src="~/images/@ViewBag.ImageFilename"alt="@Model.Name Image" class="img-responsive h-100 w-100" />
+    </div>
+
+    <div class="col-sm-8">
+        <h4>@Model.Name</h4>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Price:</td>
+                <td>@Model.Price</td>
+            </tr>
+            <tr>
+                <td>Category:</td>
+                <td>@Model.Category.Name</td>
+            </tr>
+            <tr>
+                <td>Vendor:</td>
+                <td>@Model.Vendor.Name</td>
+            </tr>
+        </table>
+
+</div>
+</div>

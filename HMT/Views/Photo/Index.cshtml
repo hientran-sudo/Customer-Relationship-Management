@@ -1,0 +1,40 @@
+﻿@model List<PItem>
+@{
+    ViewBag.Title = "Photos";
+}
+<div class="row">
+    <div class="col-sm-2">
+        <form asp-action="Filter" method="post">
+            <div class="form-group">
+                <label>Store:</label>
+                <select name="filter" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.PStores,
+                    "PStoreID", "Name", ViewBag.Filters.PStoreID))">
+                    <option value="all">All</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Division:</label>
+                <select name="filter" class="form-control"
+                        asp-items="@(new SelectList(ViewBag.PDivs,
+                    "PDivID", "Name", ViewBag.Filters.PDivID))">
+                    <option value="all">All</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-info">Filter</button>
+            <a asp-action="Index" asp-route-id="" class="btn btn-info">Clear</a>
+        </form>
+    </div>
+    <div class="col-sm-10">
+        <ul class="list-inline">
+            @foreach (var item in Model)
+            {
+                <li class="list-inline-item">
+                    <img src="~/images/@item.Image" style="width:295px"/>
+                </li>
+            }
+        </ul>       
+    </div>
+</div>
+

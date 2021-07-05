@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] HMT</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</head>
+<body>
+    <header>
+        <div class="container mb-5">
+            <nav class="nav nav-tabs">
+
+                <a class="nav-item nav-link active" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav-item nav-link" asp-controller="Product" asp-action="Index">Products</a>
+                <a class="nav-item nav-link" asp-controller="Sale" asp-action="Index">Sales</a>
+                <a class="nav-item nav-link" asp-controller="Customer" asp-action="Index">Customers</a>
+                <a class="nav-item nav-link" asp-controller="Photo" asp-action="Index">Photos</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>
+
