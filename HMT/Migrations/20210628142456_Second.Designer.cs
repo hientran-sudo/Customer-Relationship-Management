@@ -353,9 +353,7 @@ namespace HMT.Migrations
                         .WithMany()
                         .HasForeignKey("PStoreID");
 
-                    b.Navigation("PDiv");
-
-                    b.Navigation("PStore");
+                   
                 });
 
             modelBuilder.Entity("HMT.Models.Product", b =>
@@ -372,9 +370,7 @@ namespace HMT.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
-
-                    b.Navigation("Vendor");
+                   
                 });
 
             modelBuilder.Entity("HMT.Models.Sale", b =>
@@ -391,9 +387,7 @@ namespace HMT.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
-
-                    b.Navigation("Store");
+                   
                 });
 
             modelBuilder.Entity("HMT.Models.Sold", b =>
@@ -410,19 +404,17 @@ namespace HMT.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Product");
-
-                    b.Navigation("Sale");
+                   
                 });
 
             modelBuilder.Entity("HMT.Models.Product", b =>
                 {
-                    b.Navigation("Solds");
+                    
                 });
 
             modelBuilder.Entity("HMT.Models.Sale", b =>
                 {
-                    b.Navigation("Solds");
+                    
                 });
 #pragma warning restore 612, 618
         }

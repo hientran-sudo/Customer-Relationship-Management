@@ -14,12 +14,16 @@
     <header>
         <div class="container mb-5">
             <nav class="nav nav-tabs">
-
                 <a class="nav-item nav-link active" asp-controller="Home" asp-action="Index">Home</a>
                 <a class="nav-item nav-link" asp-controller="Product" asp-action="Index">Products</a>
                 <a class="nav-item nav-link" asp-controller="Sale" asp-action="Index">Sales</a>
                 <a class="nav-item nav-link" asp-controller="Customer" asp-action="Index">Customers</a>
                 <a class="nav-item nav-link" asp-controller="Photo" asp-action="Index">Photos</a>
+
+                <div class="navbar-right ml-auto">
+                    <a class="nav-link"
+                       asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
+                </div>
             </nav>
         </div>
     </header>

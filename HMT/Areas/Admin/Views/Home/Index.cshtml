@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+<h3>Admin Page</h3>
+<br />
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="list-group">
+            <a asp-controller="Categories" asp-action="Index"
+               class="list-group-item">Manage Categories</a>
+            <a asp-controller="Vendors" asp-action="Index"
+               class="list-group-item">Manage Vendors</a>
+            <a asp-controller="Stores" asp-action="Index"
+               class="list-group-item">Manage Stores</a>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("scripts", false)
+    <title>My Admin Page</title>
+</head>
+<body>
+    <header>
+        <div class="container mb-5">
+            <nav class="nav nav-tabs">
+                <a class="nav-item nav-link" asp-area="" asp-controller="Home" asp-action="Index">View Site</a>
+                <div class="navbar-right ml-auto">
+                    <a class="nav-link"
+                       asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+</html>
+
+
